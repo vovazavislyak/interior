@@ -57,7 +57,13 @@ a {
 
 .menu {
     position: relative;
-    top: -8px;
+    top: -15px;
+}
+
+.menu__btn {
+    display: none;
+    font-size: 36px;
+    line-height: 56px;
 }
 
 .menu ul:last-child img {
@@ -92,12 +98,13 @@ a {
     height: 100vh;
     background-image: url(../images/slider-img.png);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-    padding-top: 2.5%;
-    /* padding-top: 370px; */
+    background-size: cover;
+    padding-top: 40vh;
 }
-
+.header__slider .slider__item{
+    /* background-position: right 18% bottom 45%; */
+}
 .header__slider .slider__item-subtitle,
 .hot__deals-slider .slider__item-subtitle {
     line-height: 48px;
@@ -135,8 +142,9 @@ a {
     color: #212121;
     cursor: pointer;
     transition: all .3s;
-    position: relative;
     border-radius: 25px;
+    padding-left: 30px;
+    outline: none;
     position: relative;
 }
 
@@ -172,7 +180,6 @@ a {
 
 .order__btn {
     width: 200px;
-    padding-left: 30px;
     border: 1px solid transparent;
     box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35);
 }
@@ -226,15 +233,15 @@ a {
 
 .tab__control {
     border-bottom: 1px solid;
+    max-width: 320px;
 }
 
 .tab__control .item {
     display: inline;
-    padding: 0 15px;
+    padding: 0 15px 11px 15px;
     font-weight: 700;
     font-size: 36px;
     cursor: pointer;
-    padding-bottom: 11px;
     transition: all .3s;
 }
 
@@ -242,16 +249,16 @@ a {
     color: #fff;
     background-color: #212121;
     border-radius: 15px;
+    border-bottom: none;
 }
 
 .tab__control .active__item {
     color: #212121;
-    border-bottom: 3px solid;
+    border-bottom: 3px solid #212121;
 }
 
 .explore__btn {
     width: 240px;
-    padding-left: 30px;
 }
 
 .tab__content,
@@ -338,13 +345,13 @@ a {
 }
 
 .promo__content {
-    /* display: inline-block; */
     height: 100vh;
     width: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-    padding: 15% 0 0 8%;
+    padding-top: 36vh;
+    padding-left: 6vw;
 }
 
 .promo__subtitle,
@@ -377,7 +384,8 @@ a {
 .trending__title {
     font-size: 36px;
     font-weight: 700;
-    color: #212121;
+    color: #212121;    
+    line-height: 42px;
 }
 
 .trending__content {
@@ -414,7 +422,7 @@ a {
 
 .exclusive__product .big__item {
     margin-right: 30px;
-    padding: 15% 0 0 30px;
+    padding: 190px 0 0 30px;
     height: 570px;
     max-width: 570px;
     width: 100%;
@@ -449,44 +457,48 @@ a {
     background-position: center;
     padding-top: 125px;
 }
-.mobile__app-inner{
+
+.mobile__app-inner {
     max-width: 430px;
 }
-.mobile__app-subtitle{
+
+.mobile__app-subtitle {
     text-transform: uppercase;
     font-weight: 700;
     line-height: 48px;
     font-size: 18px;
 }
 
-.mobile__app-title{
+.mobile__app-title {
     font-weight: 100;
     font-size: 62px;
     line-height: 72px;
 }
-.mobile__app-text{
+
+.mobile__app-text {
     font-size: 22px;
     margin: 25px 0 35px;
 }
 
-.mobile__app-download a{
+.mobile__app-download a {
     padding-right: 10px;
 }
 
-.footer{
+.footer {
     padding: 120px 0 30px;
     background-color: #f7f7f7;
 }
 
-.footer__content{
+.footer__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 70px;
     color: #212121;
     /* color: red; */
 }
 
-.footer .title{
+.footer .title {
     color: #6c6c6c;
     margin-bottom: 25px;
     font-size: 18px;
@@ -499,41 +511,43 @@ a {
     width: 230px;
 }
 
-.footer .contact .address{
+.footer .contact .address {
     margin-bottom: 30px;
 }
-.footer .contact .email{
+
+.footer .contact .email {
     color: #212121;
 }
 
-.footer .information{
+.footer .information {
     max-width: 430px;
     width: 100%;
 }
-.footer .information a{
+
+.footer .information a {
     display: block;
     line-height: 26px;
     font-weight: 700;
     text-transform: uppercase;
     color: #212121;
-    padding: 2.5px 0 2.5px 5px;
+    padding: 2.5px 8px 2.5px 5px;
 }
 
-.footer .information__inner{
+.footer .information__inner {
     display: flex;
     justify-content: space-between;
 }
 
-.footer .email__form{
+.footer .email__form {
     max-width: 390px;
     width: 100%;
 }
 
-.footer .email__form .text{
+.footer .email__form .text {
     margin-bottom: 25px;
 }
 
-.footer form input{
+.footer form input {
     width: 100%;
     line-height: 48px;
     border: 1px solid #d9dee1;
@@ -541,10 +555,12 @@ a {
     color: #6c6c6c;
     outline: none;
 }
+
 .footer form {
     position: relative;
 }
-.footer form::after{
+
+.footer form::after {
     content: "\ea95";
     font-family: 'icomoon';
     position: absolute;
@@ -554,29 +570,30 @@ a {
     color: #6c6c6c;
 }
 
-.footer__bottom{
+.footer__bottom {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     font-weight: 700;
     letter-spacing: 0.5px;
     line-height: 26px;
     font-size: 12px;
 }
 
-.footer__bottom .social__media{
+.footer__bottom .social__media {
     width: 150;
 }
 
-.footer__bottom .social__media ul{
+.footer__bottom .social__media ul {
     list-style: none;
 }
 
-.footer__bottom .social__media li{
+.footer__bottom .social__media li {
     display: inline-block;
     margin-right: 5px;
 }
 
-.footer__bottom .social__media a::before{
+.footer__bottom .social__media a::before {
     font-family: 'icomoon';
     font-size: 14px;
     color: #f7f7f7;
@@ -586,29 +603,35 @@ a {
     background-color: #6c6c6c;
     padding: 8px;
 }
-.footer__bottom .facebook::before{
+
+.footer__bottom .facebook::before {
     content: "\ea90";
 }
-.footer__bottom .twitter::before{
+
+.footer__bottom .twitter::before {
     content: "\ea96";
 }
-.footer__bottom .google::before{
+
+.footer__bottom .google::before {
     content: "\ea8d";
 }
-.footer__bottom .pinterest::before{
+
+.footer__bottom .pinterest::before {
     content: "\ead1";
 }
-.footer__content .information .title{
+
+.footer__content .information .title {
     padding-left: 5px;
 }
-.footer__content .information a:hover{
+
+.footer__content .information a:hover {
     background-color: #212121;
     color: #fff;
     border-radius: 10px;
     transition: all .3s;
 }
 
-.footer__bottom .social__media a:hover::before{
+.footer__bottom .social__media a:hover::before {
     color: #6c6c6c;
     border-color: #f7f7f7;
     background-color: #f7f7f7;
