@@ -102,9 +102,7 @@ a {
     background-size: cover;
     padding-top: 40vh;
 }
-.header__slider .slider__item{
-    /* background-position: right 18% bottom 45%; */
-}
+
 .header__slider .slider__item-subtitle,
 .hot__deals-slider .slider__item-subtitle {
     line-height: 48px;
